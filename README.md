@@ -337,7 +337,7 @@ lr_0_01_bs_64
 lr_0_01_bs_128
 
 lr_0_01_bs_256
-# Note: Chanage folder names to draw figure for batch size 0.001 and 0.0001
+ Note: Change folder names to draw figure for batch size 0.001 and 0.0001
 # Output
 Figure 3: Learning rate 0.01 with varying batch sizes
 
@@ -354,7 +354,7 @@ Run script to generate comparative accuracy plots
 
 Legend automatically prioritizes DSFR models first
 
-# Note: This code generated Figures 3, 4, and 5 in the associated research article by varying the learning rate input files while keeping the batch size comparison structure consistent.
+Note: This code generated Figures 3, 4, and 5 in the associated research article by varying the learning rate input files while keeping the batch size comparison structure consistent.
 
 # Hyperparameter Performance Visualization
 The script 08_LR_BS_Plots.py generates Figure 6 of the manuscript: a 3×3 grid comparing model accuracy across learning rates (0.01, 0.001, 0.0001) and batch sizes (32,64,128 and 256) for all regularization methods.
