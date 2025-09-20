@@ -76,11 +76,11 @@ Notes
 Reproducibility: The script automatically sorts species by sequence count (descending) and assigns labels.
 
 Integration: Use this CSV as input for statistical analyses or visualizations (e.g., PCA, t-SNE).
-# Comparative Analysis of Regularization Methods
-The script GGAR_MLP_and_Variants.py evaluates six neural network architectures with different regularization strategies for classifying Brassica species based on codon frequencies.
+# Comparative Analysis of Novel DSFR with MLP and its  Regularized Variants
+The script 03_DSFR_MLP.py evaluates six neural network architectures with different regularization strategies for classifying 4 grass species based on codon frequencies.
 
 # Key Methods
-GGAR: Gradient-Guided Adaptive Regularizer (novel).
+DSFR: Dynamic Sparse Focus Regularization (novel).
 
 AdaptiveL1L2: Fixed L1 + L2 regularization.
 
@@ -112,7 +112,7 @@ Training logs: Fold-wise metrics and timing.
 # Example Output Structure
 results/
 ├── lr_0_001_bs_64/
-│   ├── results_GGAR/
+│   ├── results_DSFR/
 │   │   ├── Best_Model_Metrics.csv
 │   │   ├── Confusion_Matrix.png
 │   │   └── (other metrics CSVs)
@@ -142,12 +142,12 @@ learning_rate (e.g., 0.001)
 
 batch_size (e.g., 64)
 
-method (e.g., GGAR, MLP)
+method (e.g., DSFR, MLP)
 
  Output: Saves combined CSVs to results/Combined_CSVs/, preserving the original filenames (e.g., Best_Model_Metrics.csv now contains all configurations).
 
 # Usage
-1. Ensure GGAR_MLP_and_Variants.py has generated results in the expected directory structure.
+1. Ensure DSFR_MLP.py has generated results in the expected directory structure.
 
 2. Run:
 python combine_csvs.py
@@ -159,11 +159,11 @@ results/
     ├── Average_Metrics.csv          # All fold-averaged metrics  
     └── (other combined files...)  
 #  Purpose
-Enables batch analysis of all models (e.g., comparing GGAR vs baselines across hyperparameters).
+Enables batch analysis of all models (e.g., comparing DSFR vs baselines across hyperparameters).
 
 Eliminates manual CSV merging for large-scale experiments.
 # Statistical Comparison of Regularization Methods
-The script Anova_Kruskal_Wallis.py performs comprehensive statistical comparisons across all trained models (GGAR vs baselines) using:
+The script Anova_Kruskal_Wallis.py performs comprehensive statistical comparisons across all trained models (DSFR vs baselines) using:
 
 ANOVA (for normally distributed data with equal variances)
 
