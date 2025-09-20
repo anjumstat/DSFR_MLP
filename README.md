@@ -163,7 +163,7 @@ Enables batch analysis of all models (e.g., comparing DSFR vs baselines across h
 
 Eliminates manual CSV merging for large-scale experiments.
 # Statistical Comparison of Regularization Methods
-The script Anova_Kruskal_Wallis.py performs comprehensive statistical comparisons across all trained models (DSFR vs baselines) using:
+The script 05_Anova_Kruskal_Wallis.py performs comprehensive statistical comparisons across all trained models (DSFR vs baselines) using:
 
 ANOVA (for normally distributed data with equal variances)
 
@@ -186,11 +186,11 @@ Best_Method, p_value, Significant (p < 0.05).
 
 Mean differences between top methods.
 # Useage
-python Anova_Kruskal_Wallis.py  
+python 05_Anova_Kruskal_Wallis.py  
 Prerequisites: Ensure combine_csvs.py has generated the input CSV.
 # Example Output
 Learning_Rate	Batch_Size	Metric	Best_Method	p_value	Significant
-0.001	64	Test_Accuracy	GGAR	0.003	True
+0.001	64	Test_Accuracy	DSFR	0.003	True
 # Purpose
 Quantifies significant performance differences between regularization strategies.
 # Training Dynamics Visualization
