@@ -276,7 +276,7 @@ Plotting: Creates a side-by-side plot with consistent styling and saves the outp
 
 Note: This code was used to generate Figure 1 in the associated research article.
 # Figure 2 t-SNE Codon Usage Density Visualization
-# 07_t_SNE.py
+# Script file:  07_t_SNE.py
 
 # Description
 This script generates a density-based t-SNE visualization of gene codon usage patterns using a pink color scheme, optimized for publication quality.
@@ -307,6 +307,54 @@ pandas, matplotlib, seaborn, scikit-learn
 Set correct file paths
 
 Run script to generate t-SNE visualization
+Training and Validation Accuracy Curves
+File
+# Figure 3, Figure 4 and Figure 5 Training and Validation Accuracy cureves across Learning Rates and Batch Sizes
+# Script file:  
+08_Training_Validation_Accuracy.py
+
+# Description
+This script generates comparative training and validation accuracy plots across different batch sizes for a fixed learning rate, visualizing the performance of DSFR and other models.
+
+# Key Features
+Multi-batch comparison: Compares performance across batch sizes 32, 64, 128, and 256
+
+Cross-validation averaged: Averages results across 10-fold cross-validation
+
+Ready: Clean formatting with gridlines and consistent styling
+
+Automated legend: Creates a comprehensive legend showing all model variants
+
+# Input
+Directory: E:\dsfrMLP\DSFR\
+
+Subfolders: Contains results for different batch sizes:
+
+lr_0_01_bs_32
+
+lr_0_01_bs_64
+
+lr_0_01_bs_128
+
+lr_0_01_bs_256
+# Note: Chanage folder names to draw figure for batch size 0.001 and 0.0001
+# Output
+Figure 3: Learning rate 0.01 with varying batch sizes
+
+Figure 4: Learning rate 0.001 with varying batch sizes
+
+Figure 5: Learning rate 0.0001 with varying batch sizes
+
+# Usage
+Set the base_dir path to your results directory
+
+Modify folders list to match your batch size subdirectories
+
+Run script to generate comparative accuracy plots
+
+Legend automatically prioritizes DSFR models first
+
+# Note: This code generated Figures 3, 4, and 5 in the associated research article by varying the learning rate input files while keeping the batch size comparison structure consistent.
 # Training Dynamics Visualization
 The script Plots_Accuracy_Loss.py generates comparative plots of training/validation metrics across all regularization methods (GGAR, AdaptiveL1L2, etc.) for a specific hyperparameter combination (LR=0.0001, BS=32), Note: you can draw for any learning rate and batch size by changing the name of the input folder.
 
