@@ -275,7 +275,38 @@ UMAP: Embeds the data into two dimensions using the UMAP algorithm.
 Plotting: Creates a side-by-side plot with consistent styling and saves the output.
 
 Note: This code was used to generate Figure 1 in the associated research article.
+# Figure 2 t-SNE Codon Usage Density Visualization
+# 07_t_SNE.py
 
+# Description
+This script generates a density-based t-SNE visualization of gene codon usage patterns using a pink color scheme, optimized for publication quality.
+
+# Key Features
+Density Visualization: Uses hexbin plotting to show gene density distribution
+
+Publication-Ready: Configured with proper font settings and vector/raster output
+
+Pink Color Scheme: Implements 'RdPu' colormap for consistency with other figures
+
+Large Dataset Optimization: Uses Barnes-Hut approximation for efficient computation
+
+# Input
+File: E:/dsfrMLP/combined_codon_frequencies_labeled.csv
+
+Format: CSV with species labels (column 1) and codon frequencies (columns 4+)
+
+# Output
+PDF: E:/dsfrMLP/visual/tsne_plot.pdf (vector format)
+
+PNG: E:/dsfrMLP/visual/tsne_plot.png (600 DPI)
+
+# Dependencies
+pandas, matplotlib, seaborn, scikit-learn
+
+# Usage
+Set correct file paths
+
+Run script to generate t-SNE visualization
 # Training Dynamics Visualization
 The script Plots_Accuracy_Loss.py generates comparative plots of training/validation metrics across all regularization methods (GGAR, AdaptiveL1L2, etc.) for a specific hyperparameter combination (LR=0.0001, BS=32), Note: you can draw for any learning rate and batch size by changing the name of the input folder.
 
