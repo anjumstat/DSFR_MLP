@@ -193,6 +193,58 @@ Learning_Rate	Batch_Size	Metric	Best_Method	p_value	Significant
 0.001	64	Test_Accuracy	DSFR	0.003	True
 # Purpose
 Quantifies significant performance differences between regularization strategies.
+# Figure 1 Codon Usage PCA & UMAP Visualization
+# File
+06_PCA_UMAP.py
+
+# Description
+This Python script performs dimensionality reduction and visualization on gene codon usage frequency data. It generates a two-panel figure (PCA and UMAP) for comparative analysis, specifically styled for use in academic publication.
+
+# Key Features
+Data Preprocessing: Automatically separates metadata from features, normalizes codon counts to relative frequencies (per gene), and standardizes the data for analysis.
+
+Dimensionality Reduction: Implements both PCA (for linear decomposition and variance explanation) and UMAP (for non-linear, manifold-based visualization).
+
+Publication-Ready Visualization: Creates a combined figure with a customized aesthetic, including:
+
+Consistent pink color scheme.
+
+Clear labels with explained variance for PCA axes.
+
+Legends, gridlines, and appropriate styling.
+
+High-resolution (300 DPI) output.
+
+# Input
+File Path: E:/dsfrMLP/combined_codon_frequencies_labeled.csv
+
+Expected CSV Format:
+
+First 3 Columns: Metadata (Sequence_ID, Species, Label)
+
+Subsequent Columns: Codon count/frequency data for each gene sequence.
+
+# Output
+Figure: Saves a high-resolution PNG file to E:/dsfrMLP/Figure_2_PCA_UMAP_Comparison2.png
+
+Console: Prints the total variance percentage explained by the first two principal components.
+
+# Dependencies
+To run this script, you need the following Python libraries installed:
+
+pandas
+
+numpy
+
+matplotlib
+
+seaborn
+
+scikit-learn
+
+umap-learn
+
+You can install the required packages using pip:
 # Training Dynamics Visualization
 The script Plots_Accuracy_Loss.py generates comparative plots of training/validation metrics across all regularization methods (GGAR, AdaptiveL1L2, etc.) for a specific hyperparameter combination (LR=0.0001, BS=32), Note: you can draw for any learning rate and batch size by changing the name of the input folder.
 
