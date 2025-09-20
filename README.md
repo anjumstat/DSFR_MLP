@@ -54,10 +54,10 @@ Sequence_ID: FASTA record identifier.
 Columns for all 64 codons (e.g., AAA, AAC, ..., TTT) with raw counts.
 
 Example Output (First 3 Rows)
-Species	                               Label	Sequence_ID	  AAA	AAC	...	TTT
-Brassica_napus.AST_PRJEB5043_v1.cds...	1	     CDY69013	      6	6	...	   4
-Brassica_napus.AST_PRJEB5043_v1.cds...	1	     CDY71688	     10	8	...	   6
-Brassica_napus.AST_PRJEB5043_v1.cds...	1	     CDY71689	     6	1	...	   3
+Species	                  Label	   Sequence_ID	                 AAA	AAC	...	TTT
+Triticum_aestivum       	1	      TraesCS4A02G403700.1	         4	0	...	   1
+Triticum-aestivum         	1	      TraesCS4A02G154800.1          3	4	...	   0
+Triticum_aestivum         	1	      TraesCS4B02G516800.1	         1	23	...	   2
 (Full CSV includes all 64 codons and all sequences.)
 # Usage
 python 02_CDS_Codon_Freq_CSV.py
