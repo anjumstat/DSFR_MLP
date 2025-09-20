@@ -244,7 +244,38 @@ scikit-learn
 
 umap-learn
 
-You can install the required packages using pip:
+# You can install the required packages using pip:
+pip install pandas numpy matplotlib seaborn scikit-learn umap-learn
+# Usage
+Ensure the input file path in the script (file_path) is correct for your system.
+
+Run the script. It will automatically:
+
+Load and preprocess the data.
+
+Perform PCA and UMAP.
+
+Generate and display the figure.
+
+Save the figure to the specified path.
+
+The generated image (Figure_2_PCA_UMAP_Comparison2.png) is ready for use in publications or presentations.
+
+# Code Overview
+Data Loading & Separation: Reads the CSV and splits it into metadata and feature matrices.
+
+Normalization: Converts raw codon counts to relative frequencies per gene.
+
+Standardization: Scales the features to have zero mean and unit variance.
+
+PCA: Computes the first two principal components and calculates explained variance.
+
+UMAP: Embeds the data into two dimensions using the UMAP algorithm.
+
+Plotting: Creates a side-by-side plot with consistent styling and saves the output.
+
+Note: This code was used to generate Figure 1 in the associated research article.
+
 # Training Dynamics Visualization
 The script Plots_Accuracy_Loss.py generates comparative plots of training/validation metrics across all regularization methods (GGAR, AdaptiveL1L2, etc.) for a specific hyperparameter combination (LR=0.0001, BS=32), Note: you can draw for any learning rate and batch size by changing the name of the input folder.
 
